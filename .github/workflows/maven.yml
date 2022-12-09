@@ -30,7 +30,11 @@ jobs:
      run: >
        mvn -f myproject/pom.xml 
        clean verify
+   - name: Generate JUnit Report
+     run: > 
+       mvn -f myproject/pom.xml
        surefire-report:report-only site:site -DgenerateReports=false
+     if: ${{ always() }}  
    - name: Archive JUnit Report
      uses: actions/upload-artifact@v2
      with:
