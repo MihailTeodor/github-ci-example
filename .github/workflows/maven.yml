@@ -11,7 +11,7 @@ jobs:
    strategy:
      matrix:
        # test against several Java versions:
-       java: [ 8, 11 ]
+       java: [ 8 ]
        # test against several OSes	
        os: [ ubuntu-latest, macos-latest, windows-latest ]
 
